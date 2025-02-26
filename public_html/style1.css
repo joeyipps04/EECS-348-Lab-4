@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #7c0a02;
+    color: #333;
+}           /*sets color and font of text, and background color to barn red*/
+
+.profile-container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+/*color and dimensions of container with jpg*/
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #0073e6;
+}
+/*size and border of jpg*/
+a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #FFFF00;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/*sets borders for block*/
+a:hover {
+    background-color: #005bb5;
+}

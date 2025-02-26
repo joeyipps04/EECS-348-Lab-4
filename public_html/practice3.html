@@ -1,0 +1,34 @@
+<html>
+<head>
+   <h1>EECS Lab Four, Practice 3</h1> <!--Title-->
+</head>
+<body>
+    <h1>Password Verification</h1>  <!--Subtitle-->
+
+    <label>Enter Password:</label>
+    <input type="password" id="passworda">  <!--Obtains password from user-->
+
+    <label>Confirm Password:</label>
+    <input type="password" id="passwordb">  <!--Obtains password again, in order to verify match-->
+
+    <button onclick="verifyPassword()">Check Passwords</button>
+<!--Button to initiate function of checking passwords-->
+    <script>
+        function verifyPassword() {
+            let password1 = document.getElementById("passworda").value;
+            let password2 = document.getElementById("passwordb").value;
+            //Initializes password strings
+            if (password1.length < 8) {
+                alert("Password is not 8 characters long. Make it longer!");
+                //Raises error when password is too short
+            } else if (password1 !== password2) {
+                alert("Passwords do not match.");
+                //Raises error when passwords are not equal
+            } else {
+                alert("Passwords match!");
+            }//Returns succesful message if passwords match
+        }
+    </script>
+</body>
+</html>
+
