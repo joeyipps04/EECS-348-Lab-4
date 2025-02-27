@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <h1>EECS Lab Four, Practice Two</h1>        <!-Title->
+    <link rel="stylesheet" href="style2.css">       <!-Calls on css sheet->
+</head>
+<body>
+    <h1>Control the font and border!</h1>       <!-Subtitle->
+    <p id="text-box">I hope you are enjoying my website! I think that practice one produced the coolest site, but whatever floats your boat:)</p>
+    <!-Dummy text for user to adjust->
+      <h3>Text Color (RGB)</h3>
+    <label>Red(0-255):</label> <input type="number" id="text-red" min="0" max="255">
+    <label>Green(0-255):</label> <input type="number" id="text-green" min="0" max="255">
+    <label>Blue(0-255):</label> <input type="number" id="text-blue" min="0" max="255">
+<!-Obtains number for each color for the text from the user. Sets minimum and maximum numbers to avoid incorrect input->
+    <h3>Border Color (RGB)</h3>
+    <label>Red(0-255):</label> <input type="number" id="border-red" min="0" max="255">
+    <label>Green(0-255):</label> <input type="number" id="border-green" min="0" max="255">
+    <label>Blue(0-255):</label> <input type="number" id="border-blue" min="0" max="255">
+<!-Obtains number for each color for the border from the user. Sets minimum and maximum numbers to avoid incorrect input->
+    <h3>Border Width</h3>
+    <input type="number" id="border-width" min="0"> px
+<!-Obtains number for border width. No maximum value here.
+    <br><br>
+    <button onclick="applyStyles()">Apply</button>      <!-Gives function to apply button->
+
+     <script>       //-uses style2 to use style changes
+        function applyStyles() {
+            
+            let textR = parseInt(document.getElementById("text-red").value) || 0;
+            let textG = parseInt(document.getElementById("text-green").value) || 0;
+            let textB = parseInt(document.getElementById("text-blue").value) || 0;
+//Obtains color changesfor text
+            
+            let borderR = parseInt(document.getElementById("border-red").value) || 0;
+            let borderG = parseInt(document.getElementById("border-green").value) || 0;
+            let borderB = parseInt(document.getElementById("border-blue").value) || 0;
+//Obtains color changes for border
+            
+            let borderWidth = parseInt(document.getElementById("border-width").value) || 1;
+//Obtains border width
+           
+            let paragraph = document.getElementById("text-box");
+            paragraph.style.color = `rgb(${textR}, ${textG}, ${textB})`;
+            paragraph.style.border = `${borderWidth}px solid rgb(${borderR}, ${borderG}, ${borderB})`;
+        }
+        //Executes changes
+    </script>
+</body>
+</html>
+
